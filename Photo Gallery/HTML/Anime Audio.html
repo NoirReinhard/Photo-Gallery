@@ -1,0 +1,355 @@
+<html>
+  <head>
+    <title>Anime Gallery Transition</title>
+    <style>
+      .head {
+        background-color: bisque;
+        height: fit-content;
+      }
+
+      .image {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      h1 {
+        color: black;
+        text-align: center;
+        margin: 5px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        padding: 10px;
+        margin-bottom: 25px;
+        background-color: red;
+        border: black 5px double;
+      }
+
+      img {
+        width: 200px;
+        height: fit-content;
+        padding: 5px;
+        flex-basis: 20%;
+        border: solid 3px red;
+        border-radius: 100px;
+      }
+
+      p {
+        color: brown;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 5px;
+        border: 3px solid black;
+        width: 200px;
+        border-radius: 10px;
+      }
+
+      .one,
+      .two,
+      .three,
+      .four,
+      .five,
+      .six,
+      .seven,
+      .eight {
+        /* border: solid 3px red; */
+        flex-basis: 20%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 200px;
+        margin: 25px;
+      }
+      .image2 {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      #ab {
+        display: none;
+        position: absolute;
+        background-color: bisque;
+      }
+      #head2 {
+        background-color: bisque;
+        height: fit-content;
+        display: none;
+      }
+      #btn {
+        position: absolute;
+        top: 45%;
+        right: 88%;
+        background: transparent;
+        border: none;
+        /* color:white; */
+        height: 20px;
+        width: 20px;
+        display: none;
+      }
+      #itachi {
+        display: block;
+      }
+      #A {
+        display: none;
+        position: absolute;
+        top: 19%;
+      }
+      #d1 {
+        position: absolute;
+        width: 220px;
+        height: 255px;
+        border: none;
+        display: none;
+        right: 55%;
+        top: 35%;
+      }
+      #d2 {
+        position: absolute;
+        width: 206px;
+        height: 255px;
+        border: none;
+        display: none;
+        top: 35%;
+        right: 31%;
+      }
+      #d3 {
+        position: absolute;
+        width: 215px;
+        height: 255px;
+        border: none;
+        display: none;
+        top: 46%;
+        right: 6%;
+      }
+      #d4 {
+        position: absolute;
+        width: 210px;
+        height: 255px;
+        border: none;
+        display: none;
+        top: 140%;
+      }
+      #d5 {
+        position: absolute;
+        width: 220px;
+        height: 100px;
+        border: none;
+        display: none;
+        top: 130%;
+      }
+      #d6 {
+        position: absolute;
+        width: 220px;
+        height: 200px;
+        border: none;
+        display: none;
+        top: 127%;
+      }
+      #d7 {
+        position: absolute;
+        width: 215px;
+        height: 255px;
+        border: none;
+        display: none;
+        top: 135%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head" id="head">
+      <h1>Anime Gallery</h1>
+      <div class="image" id="first">
+        <div class="two">
+          <img
+            src="..\Assets\Itachi.jpg"
+            alt=""
+            id="itachi"
+            onmouseover="a2()"
+            onmouseout="o2()"
+          />
+          <img
+            src="..\Assets\Shadow.jpg"
+            alt=""
+            id="A"
+            onmouseover="a()"
+            onmouseout="t()"
+          />
+          <button id="btn">&#9658;</button>
+          <p id="i">A Prodigy who massacred his clan for the sake of village</p>
+        </div>
+        <div class="one">
+          <img
+            src="..\Assets\Shadow.png"
+            alt=""
+            onmouseover="a1()"
+            onmouseout="o1()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d1" />
+          <p>Shadow also known as cid kagenou who obsessed with magic</p>
+        </div>
+
+        <div class="three">
+          <img
+            src="..\Assets\Sasuke & Itachi.jpg"
+            alt=""
+            onmouseover="a3()"
+            onmouseout="o3()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d2" />
+          <p>
+            The two brothers who belongs to the uchiha clan,Which is also known
+            as a cold blooded clan.
+          </p>
+        </div>
+        <div class="four">
+          <img
+            src="..\Assets\Arima Kousei.jpg"
+            alt=""
+            onmouseover="a4()"
+            onmouseout="o4()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d3" />
+          <p>
+            A Prodigy in piano who plays piano without an error and honest to
+            the scores
+          </p>
+        </div>
+        <div class="five">
+          <img
+            src="..\Assets\Gojo Satoru.png"
+            alt=""
+            onmouseover="a5()"
+            onmouseout="o5()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d4" />
+          <p>
+            A Strongest sorcerer among jujutsu sorcerers who lives in modern era
+          </p>
+        </div>
+        <div class="six">
+          <img
+            src="..\Assets\Oreki.jpg"
+            alt=""
+            onmouseover="a6()"
+            onmouseout="o6()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d5" />
+          <p>
+            A intellectul kid who cares about nothing much and well versed in
+            solving mysteries
+          </p>
+        </div>
+        <div class="seven">
+          <img
+            src="..\Assets\Yukine.jpg"
+            alt=""
+            onmouseover="a7()"
+            onmouseout="o7()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d6" />
+          <p>A Blessed vessel who serves yato,The God of Calamity</p>
+        </div>
+        <div class="eight">
+          <img
+            src="..\Assets\Akatsuki.jpg"
+            alt=""
+            onmouseover="a8()"
+            onmouseout="o8()"
+          />
+          <img src="..\Assets\Dark.jpg" alt="" id="d7" />
+          <p>
+            A Merciless group that wants to bring their own so called peace to
+            the world
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <audio src="../Audio/Amaterasu.mp3" id="At"></audio>
+    <audio src="../Audio/Atomic.mp3" id="Am"></audio>
+    <audio src="../Audio/Sorry.mp3" id="So"></audio>
+    <audio src="../Audio/Arima.mp3" id="Ar"></audio>
+    <audio src="../Audio/Domain.mp3" id="Do"></audio>
+    <audio src="../Audio/Curious.mp3" id="Cu"></audio>
+    <audio src="../Audio/Yato.mp3" id="Ya"></audio>
+    <audio src="../Audio/God.mp3" id="Go"></audio>
+  </body>
+  <script>
+    let itachi = document.getElementById("itachi");
+    function a1() {
+      let audio = document.getElementById("At");
+      audio.play();
+    }
+    function a2() {
+      let audio = document.getElementById("Am");
+      audio.play();
+    }
+    function a3() {
+      let audio = document.getElementById("So");
+      audio.play();
+    }
+    function a4() {
+      let audio = document.getElementById("Ar");
+      audio.play();
+    }
+    function a5() {
+      let audio = document.getElementById("Do");
+      audio.play();
+    }
+    function a6() {
+      let audio = document.getElementById("Cu");
+      audio.play();
+    }
+    function a7() {
+      let audio = document.getElementById("Ya");
+      audio.play();
+    }
+    function a8() {
+      let audio = document.getElementById("Go");
+      audio.play();
+    }
+    function o1() {
+      let audio = document.getElementById("At");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    function o2() {
+      let audio = document.getElementById("Am");
+      audio.pause();
+      audio.currentTime = 0;
+      // document.getElementById("head").style.display="none";
+      // document.getElementById("ab").style.display="block";
+      // document.getElementById("head2").style.display="block";
+    }
+    function o3() {
+      let audio = document.getElementById("So");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    function o4() {
+      let audio = document.getElementById("Ar");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    function o5() {
+      let audio = document.getElementById("Do");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    function o6() {
+      let audio = document.getElementById("Cu");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    function o7() {
+      let audio = document.getElementById("Ya");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    function o8() {
+      let audio = document.getElementById("Go");
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+</html>
